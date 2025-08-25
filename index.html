@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BunnyBeatsz</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="player-container">
+    <!-- Barra superior -->
+    <div class="top-bar">
+        <img src="imagens/menu.png" alt="Menu">
+      <h1 class="titulo-player">BunnyBeatsz</h1>
+      <!-- Botões de janela -->
+      <div class="window-buttons">
+        <img class="btn-min" src="imagens/minimizar.png" alt="Minimizar">
+        <img class="btn-close" src="imagens/fechar.png" alt="Fechar">
+      </div>
+    </div>
+
+    <!-- Capa -->
+    <img class="capa-container" src="imagens/Saja_Boys_Soda_Pop.jpg" alt="Capa da Música">
+
+    <!-- Descrição -->
+    <div class="descricao">
+      <h2 class="nome-musica">Soda Pop</h2>
+      <p class="nome-artista">Saja Boys</p>
+    </div>
+
+    <!-- Barra de duração -->
+    <div class="duracao">
+      <input type="range" min="0" max="100" value="0" class="barra">
+    </div>
+
+    <!-- Tempo -->
+    <div class="tempo">
+      <p class="inicio">0:00</p>
+      <p class="fim">0:00</p>
+    </div>   
+
+    <!-- Controles do player -->
+    <div class="player">
+      <img class="btn-shuffle" src="imagens/rainbow.png" alt="Aleatório">
+      <img class="btn-prev" src="imagens/prev.png" alt="Anterior">
+
+      <!-- Botões sobrepostos -->
+      <div class="play-pause">
+        <img class="btn-play" src="imagens/play.png" alt="Play">
+        <img class="btn-pause hidden" src="imagens/pause.png" alt="Pause">
+      </div>
+
+      <img class="btn-next" src="imagens/next.png" alt="Próxima">
+      <img class="btn-loop" src="imagens/loop.png" alt="Loop">
+    </div>
+
+    <!-- Barra inferior -->
+    <div class="bottom-bar">
+      <!-- BOTÃO DO MENU DE LISTA DE MÚSICAS -->
+      <button id="menu-btn" class="menu-btn">Menu</button>
+      <img src="imagens/like_vazio.png" class="like" alt="Curtir">
+      <!-- Controle de volume -->
+  <div class="controle-volume">
+    <img id="icone-volume" class="icone-volume" src="imagens/volume-up.png" alt="Volume">
+    <input type="range" id="volume-bar" min="0" max="100" step="0.01" value="100">
+  </div>
+    </div>
+  </div>
+
+  <!-- Overlay Lista de Músicas -->
+  <div id="lista-musicas" class="overlay hidden">
+  <div class="lista-container">
+    <h2>Lista de Músicas</h2>
+    <!-- Campo de pesquisa -->
+<div class="search-container">
+  <input type="text" id="barra-pesquisa" placeholder="Buscar música...">
+  <div id="sugestoes-musica"></div>
+</div>
+  
+    <!-- Abas -->
+    <div class="tabs">
+      <button class="tab-btn active" data-tab="todas">Todas</button>
+      <button class="tab-btn" data-tab="favoritas">Favoritas</button>
+      <button class="tab-btn" data-tab="playlists">Playlists</button>
+    </div>
+
+    <!-- Lista Todas -->
+    <ul id="todas-lista" class="tab-content active">
+      <li data-musica="songs/Soda_Pop.mp3" data-artista="Saja Boys" data-capa="imagens/Saja_Boys_Soda_Pop.jpg">Soda Pop</li>
+      <li data-musica="songs/Takedown.mp3" data-artista="Huntrix" data-capa="imagens/Huntrix_Takedown.jpg">Takedown</li>
+      <li data-musica="songs/Gabriela.mp3" data-artista="Kasteye" data-capa="imagens/Kasteye_Gabriela.jpg">Gabriela</li>
+      <li data-musica="songs/Gnarly.mp3" data-artista="Katseye" data-capa="imagens/Kasteye_Gnarly.jpg">Gnarly</li>
+      <li data-musica="songs/Jump.mp3" data-artista="BlackPink" data-capa="imagens/BlackPink_Jump.jpg">Jump</li>
+      <li data-musica="songs/Golden.mp3" data-artista="Huntrix" data-capa="imagens/Huntrix_Golden.jpg">Golden</li>
+      <li data-musica="songs/How_It's_Done.mp3" data-artista="Huntrix" data-capa="imagens/Huntrix_How_It's_Done.jpg">How It's Done</li>
+      <li data-musica="songs/What_It_Sounds_like.mp3" data-artista="Huntrix" data-capa="imagens/Huntrix_What_It_Sounds_Like.jpg">What It Sounds Like</li>
+      <li data-musica="songs/Free.mp3" data-artista="Rujunu" data-capa="imagens/Rujunu_Free.jpeg">Free</li>
+      <li data-musica="songs/Your_Idol.mp3" data-artista="Saja Boys" data-capa="imagens/Saja_Boys_Your_Idol.jpg">Your Idol</li>
+      <li data-musica="songs/Forbidden_Fruit.mp3" data-artista="Rujunu" data-capa="imagens/Rujunu_Forbidden_Fruit.jpeg">Forbidden Fruit</li>
+    </ul>
+
+    <!-- Lista Favoritas -->
+    <ul id="favoritas-lista" class="tab-content"></ul>
+    <!-- Lista Playlists -->
+    <ul id="playlists-lista" class="tab-content"></ul>
+
+    <button id="voltar-btn">Voltar</button>
+  </div>
+</div>
+
+ 
+  <!-- Player de áudio -->
+  <audio></audio>
+  <script src="script.js"></script>
+</body>
+</html>
