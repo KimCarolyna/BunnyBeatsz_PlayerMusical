@@ -677,3 +677,15 @@ barraPesquisa.addEventListener("blur", () => {
 
 let ul = document.createElement("ul");
 ul.className = "playlist-modal";
+const playlistList = document.getElementById("playlist-list");
+const addPlaylistBtn = document.getElementById("add-playlist-btn");
+
+addPlaylistBtn.addEventListener("click", () => {
+  let playlistName = prompt("Digite o nome da nova playlist:");
+
+  if (playlistName && playlistName.trim() !== "") {
+    let li = document.createElement("li");
+    li.textContent = playlistName;
+    playlistList.appendChild(li);
+  }
+});

@@ -297,7 +297,6 @@ html, body {
 }
 body {
   font-family: Arial, sans-serif;
-  background: #111;
   color: #fff;
   margin: 0;
   padding: 0;
@@ -537,4 +536,20 @@ button:hover {
   max-height: 180px;
   overflow-y: auto;
   z-index: 1000;
+}
+.add-playlist {
+  display: block;
+  margin: 15px auto;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 8px;
+  background-color: #ff4db8;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.add-playlist:hover {
+  background-color: #e03fa5;
 }
