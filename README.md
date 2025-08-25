@@ -40,3 +40,7 @@ Abra o arquivo index.html no seu navegador.
 ## 📜 Licença
 
 Este projeto é livre para estudo e personalização. ✨
+
+## 🚧 Status
+
+Este projeto ainda está em desenvolvimento.
