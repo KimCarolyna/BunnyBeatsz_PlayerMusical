@@ -1,0 +1,24 @@
+{
+  "name": "bunnybeatz_player_musical",
+  "version": "1.0.0",
+  "description": "Player musical feito com Electron, HTML, CSS e JavaScript inspirado em pixel art.",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KimCarolyna/BunnyBeatsz_PlayerMusical.git"
+  },
+  "keywords": ["electron", "music player", "pixel art", "javascript", "html", "css"],
+  "author": "KimCarolyna",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KimCarolyna/BunnyBeatsz_PlayerMusical/issues"
+  },
+  "homepage": "https://github.com/KimCarolyna/BunnyBeatsz_PlayerMusical#readme",
+  "devDependencies": {
+    "electron": "^31.0.0"
+  }
+}
