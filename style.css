@@ -1,0 +1,475 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Caixa central */
+.player-container {
+    background-color: #1f1f1f;
+    border-radius: 20px;
+    padding: 20px;
+    width: 320px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative; 
+    overflow: hidden;
+}
+
+/* Barra superior */
+.top-bar {
+   width: 100%;
+   display: flex;
+   align-items: center;
+   background-color: #333333;
+   padding: 8px 10px;
+   border-radius: 12px;
+   margin-bottom: 15px;
+   position: relative;
+}
+
+.menu-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+    cursor: pointer;
+    background: url('imagens/menu.png') no-repeat center;
+    background-size: contain;
+    border: none;
+    outline: none;
+    padding: 0;
+}
+
+.titulo-player {
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+     padding-left: 10px; /* pequeno espaçamento extra */
+}
+
+/* Capa */
+.capa-container {
+    width: 250px;
+    height: 250px;
+    border-radius: 15px;
+    overflow: hidden; /* garante que nada saia do quadrado */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent; /* sem fundo extra */
+}
+.capa-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* mostra a imagem inteira */
+    border-radius: 15px; /* mantém arredondado */
+}
+
+/* Descrição */
+.descricao {
+    text-align: center;
+     margin: 15px 0 10px 0;
+}
+
+.nome-musica {
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+}
+
+.nome-artista {
+    font-size: 14px;
+    color: white;
+    opacity: 0.8;
+}
+
+/* Barra de progresso */
+.duracao {
+    width: 100%;
+    margin: 8px 0;
+}
+
+.barra {
+    width: 100%;
+    padding: 0;
+    -webkit-appearance: none;
+    height: 8px;
+    background: linear-gradient(90deg, #ff70a6 0%, #ffffff 0%);
+    border-radius: 8px;
+    outline: none;
+}
+
+/* Thumb personalizado */
+.barra::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 32px;
+    height: 32px;
+    background: url('imagens/coelhin.png') no-repeat center;
+    background-size: contain;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    margin-top: -12px;
+}
+.barra::-moz-range-thumb {
+    width: 32px;
+    height: 32px;
+    background: url('imagens/coelhin.png') no-repeat center;
+    background-size: contain;
+    border: none;
+    cursor: pointer;
+}
+
+/* Tempo */
+.tempo {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    color: white;
+}
+
+/* Controles */
+.player {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin: 15px 0;
+}
+.player img {
+    width: 30px;
+    cursor: pointer;
+}
+
+/* Botão Play/Pause */
+.play-pause {
+    position: relative;
+    width: 30px;
+    height: 30px;
+}
+.play-pause img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: opacity 0.3s ease;
+}
+.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* Barra inferior */
+.bottom-bar {
+    width: 100%;
+    background-color: #333333;
+    border-radius: 15px;
+    padding: 8px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
+    gap: 10px
+}
+
+.menu-btn {
+    background-color: #535353;
+    border: none;
+    padding: 6px 14px;
+    border-radius: 10px;
+    color: rgb(255, 255, 255);
+    font-size: 14px;
+    cursor: pointer;
+}
+
+/* Like */
+.like {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+}
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.3); }
+    100% { transform: scale(1); }
+}
+.like.animando {
+    animation: pulse 0.3s ease forwards;
+}
+
+/* Controle de Volume */
+.controle-volume {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    flex: 1;
+    justify-content: center;
+}
+.icone-volume {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+.controle-volume input[type="range"] {
+    width: 100px;
+    -webkit-appearance: none;
+    background: linear-gradient(90deg, #ff70a6 100%, #ffffff 0%);
+    height: 6px;
+    border-radius: 6px;
+    outline: none;
+    cursor: pointer;
+}
+.controle-volume input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 14px;
+    height: 14px;
+    background: #ff70a6;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.controle-volume input[type="range"]::-moz-range-thumb {
+    width: 14px;
+    height: 14px;
+    background: #ff70a6;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+/* Botões de janela */
+.window-buttons {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    display: flex;
+    gap: 6px;
+}
+.window-buttons img {
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+.window-buttons img:hover {
+    transform: scale(1.2);
+}
+
+/* Overlay lista de músicas */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;      /* ocupa toda a largura do player */
+  height: 100%;     /* ocupa toda a altura do player */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+  /* mantém a transparência */
+  border-radius: inherit; /* igual ao contorno do player */
+}
+
+.overlay.hidden {
+  display: none;
+}
+.lista-container {
+  background: #222;
+  padding: 20px;
+  border-radius: 12px;
+  width: 80%;
+  max-width: 400px;
+  text-align: center;
+  color: white;
+}
+.lista-container h2 {
+  margin-bottom: 15px;
+}
+/* Listas de músicas (todas, favoritas e playlists) */
+#todas-lista,
+#favoritas-lista,
+#playlists-lista { /* ADICIONADO playlists */
+  list-style: none;
+  padding: 0;
+  margin: 15px 0;
+  max-height: 200px;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #ff70a6 #333;
+}
+
+#todas-lista li,
+#favoritas-lista li,
+#playlists-lista li { /* ADICIONADO playlists */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid rgba(255,255,255,0.2);
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Scrollbar customizado */
+#todas-lista::-webkit-scrollbar,
+#favoritas-lista::-webkit-scrollbar,
+#playlists-lista::-webkit-scrollbar { /* ADICIONADO playlists */
+  width: 6px;
+}
+#todas-lista::-webkit-scrollbar-thumb,
+#favoritas-lista::-webkit-scrollbar-thumb,
+#playlists-lista::-webkit-scrollbar-thumb { /* ADICIONADO playlists */
+  background-color: #ff70a6;
+  border-radius: 6px;
+}
+#todas-lista::-webkit-scrollbar-track,
+#favoritas-lista::-webkit-scrollbar-track,
+#playlists-lista::-webkit-scrollbar-track { /* ADICIONADO playlists */
+  background: #333;
+}
+
+#todas-lista li:hover,
+#favoritas-lista li:hover,
+#playlists-lista li:hover { /* ADICIONADO playlists */
+  background: #333;
+  color: #ff70a6;
+}
+#voltar-btn {
+  margin-top: 15px;
+  padding: 8px 16px;
+  background: #535353;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+}
+.favorito-icon {
+  width: 16px;
+  height: 16px;
+  margin-left: 8px;
+  vertical-align: middle;
+}
+.tabs {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.tab-btn {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 6px;
+  background: #444;
+  color: white;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.tab-btn.active {
+  background: #ff70a6;
+}
+
+.tab-content {
+  display: none;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+.favorito-icon {
+  width: 16px;
+  height: 16px;
+  margin-left: 6px;
+  vertical-align: middle;
+}
+/* Itens das listas */
+#todas-lista li,
+#favoritas-lista li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;  /* mesmo espaçamento */
+  border-bottom: 1px solid rgba(255,255,255,0.2);
+  cursor: pointer;
+
+  /* Transição suave */
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#todas-lista li:hover,
+#favoritas-lista li:hover {
+  background: #333;
+  color: #ff70a6; /* opcional: deixa o texto mudar de cor suave junto */
+}
+.playlist-modal ul {
+  max-height: 200px;
+  overflow-y: auto;
+  width: 100%;
+  display: block;
+  padding-right: 8px;
+}
+
+/* Deixar a scrollbar estilizada */
+.playlist-modal ul::-webkit-scrollbar {
+  width: 6px;
+}
+.playlist-modal ul::-webkit-scrollbar-thumb {
+  background: #ff70a6;
+  border-radius: 6px;
+}
+.playlist-modal ul::-webkit-scrollbar-track {
+  background: #333;
+}
+.playlist-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4px 8px;
+}
+
+.playlist-item img {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+}
+.search-container {
+  position: relative;
+  width: 100%;
+  margin: 10px 0;
+}
+
+#barra-pesquisa {
+  width: 100%;
+  padding: 8px;
+  border-radius: 6px;
+  border: none;
+  outline: none;
+}
+
+#sugestoes-musica {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background: #222;
+  color: #fff;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px #0003;
+  max-height: 180px;
+  overflow-y: auto;
+  z-index: 1000;
+}
