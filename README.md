@@ -23,14 +23,14 @@ Possui botões personalizados, barra de progresso interativa, lista de músicas 
 Abra o arquivo index.html no seu navegador.   
 
 ## 📂 Estrutura de Pastas
-
+```bash
 📁 imagens       → ícones e artes
 📁 canções       → músicas do player
 📄 índice.html   → estrutura da interface
 📄 estilo.css    → estilos visuais
 📄 script.js     → lógica do player
 📄 main.js       → integração com Electron
-
+```
 ## 📝 Observações
 
 →Certifique-se de ter o Node.js instalado para rodar com Electron.
