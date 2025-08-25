@@ -16,9 +16,10 @@ Possui botões personalizados, barra de progresso interativa, lista de músicas 
 ## 🛠 Como usar
 1. **Clone este repositório** ou baixe os arquivos.
 2. Se quiser rodar como app com Electron:
-   ```bash
+```bash
    npm install
    npm start
+```   
 3. Caso queira apenas testar no navegador:
 Abra o arquivo index.html no seu navegador.   
 
