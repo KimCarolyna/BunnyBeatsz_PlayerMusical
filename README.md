@@ -5,6 +5,15 @@ Possui botões personalizados, barra de progresso interativa, lista de músicas 
 
 ---
 
+## 🎨 Preview  
+
+<p align="center">
+  <img src="imagens/ex1.PNG" width="250" alt="Tela principal do player"/>
+  <img src="imagens/ex2.PNG" width="250" alt="Lista de músicas"/>
+</p>  
+
+---
+
 ## 🚀 Funcionalidades
 - 🎶 Lista de músicas carregada automaticamente  
 - ⏯ Botões de **play, pause e avançar** personalizados  
