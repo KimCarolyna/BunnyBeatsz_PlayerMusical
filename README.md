@@ -34,9 +34,9 @@ Abra o arquivo index.html no seu navegador.
 ```
 ## 📝 Observações
 
--Certifique-se de ter o Node.js instalado para rodar com Electron.
+- Certifique-se de ter o Node.js instalado para rodar com Electron.
 
--Músicas e imagens são apenas exemplos. Substitua pelos seus próprios arquivos se desejar.
+- Músicas e imagens são apenas exemplos. Substitua pelos seus próprios arquivos se desejar.
 
 ## 📜 Licença
 
