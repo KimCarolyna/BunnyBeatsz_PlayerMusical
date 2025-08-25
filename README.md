@@ -8,8 +8,10 @@ Possui botões personalizados, barra de progresso interativa, lista de músicas 
 ## 🎨 Preview  
 
 <p align="center">
-  <img src="imagens/ex1.PNG" width="250" alt="Tela principal do player"/>
-  <img src="imagens/ex2.PNG" width="250" alt="Lista de músicas"/>
+  <img width="435" height="625" alt="ex1" src="https://github.com/user-attachments/assets/711f583e-4aaf-4e67-8ae9-02b43cbdb39b" width="250" alt="Tela principal do player" />
+
+  <img width="417" height="624" alt="ex2" src="https://github.com/user-attachments/assets/70b791b3-da5e-486f-8688-1b1e8c67affb" width="250" alt="Lista de músicas" />
+
 </p>  
 
 ---
