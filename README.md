@@ -22,7 +22,7 @@ Possui botões personalizados, barra de progresso interativa, lista de músicas 
 3. Caso queira apenas testar no navegador:
 Abra o arquivo index.html no seu navegador.   
 
-📂 Estrutura de Pastas
+## 📂 Estrutura de Pastas
 
 📁 imagens       → ícones e artes
 📁 canções       → músicas do player
