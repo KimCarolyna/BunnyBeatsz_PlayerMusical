@@ -295,6 +295,52 @@ html, body {
 .lista-container h2 {
   margin-bottom: 15px;
 }
+body {
+  font-family: Arial, sans-serif;
+  background: #111;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 600px;
+  margin: 30px auto;
+  padding: 20px;
+  background: #1c1c1c;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.tabs {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 15px;
+}
+
+.tab-btn {
+  background: #333;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  color: #fff;
+  border-radius: 8px;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.tab-btn.active {
+  background: #ff70a6;
+  color: #fff;
+  transform: scale(1.05);
+}
+
+.tab-content {
+  display: none;
+}
+
+.tab-content.active {
+  display: block;
+}
 /* Listas de músicas (todas, favoritas e playlists) */
 #todas-lista,
 #favoritas-lista,
@@ -318,6 +364,25 @@ html, body {
   border-bottom: 1px solid rgba(255,255,255,0.2);
   cursor: pointer;
   transition: background-color 0.3s ease, color 0.3s ease;
+}
+#todas-lista li:hover,
+#favoritas-lista li:hover,
+#playlists-lista li:hover {
+  background: #333;
+  color: #ff70a6;
+}
+button {
+  background: #ff70a6;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  color: #fff;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background: #ff4081;
 }
 
 /* Scrollbar customizado */
